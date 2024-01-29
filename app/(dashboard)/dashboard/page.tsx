@@ -15,7 +15,7 @@ export default async function DashboardPage() {
 
   return (
     <div>
-      <h2 className="text-lg font-semibold p-2 rounded-md">All Posts</h2>
+      <h2 className="text-lg font-semibold p-2 rounded-md">Public Feed</h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <Suspense fallback={<PostCardSkeleton />}>
           {posts.map((post) => (

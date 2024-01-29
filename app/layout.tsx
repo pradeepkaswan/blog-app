@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import Nav from '@/components/nav'
 import Provider from '@/components/providers/session-provider'
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
 })

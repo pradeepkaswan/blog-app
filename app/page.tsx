@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { getServerSession } from 'next-auth'
 // import { auth } from '@/auth'
 import { PostCardSkeleton } from '@/components/skeletons/post-card-skeleton'
-import { authOptions } from './api/auth/[...nextauth]/route'
+import { authOptions } from '@/lib/auth-options'
 
 async function getUserPosts(email: string) {
   const user = await prisma.user.findUnique({
@@ -39,7 +39,7 @@ export default async function Home() {
     <>
       <Hero />
       <div className="mt-4 border border-black rounded-lg flex justify-between">
-        <h2 className="text-lg font-semibold m-2 pl-2">Created Posts</h2>
+        <h2 className="text-lg font-semibold m-2 pl-2">Posts</h2>
         <Link href="/create">
           <Button className="m-1" disabled={!session}>
             + New post
